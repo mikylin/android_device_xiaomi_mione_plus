@@ -111,18 +111,16 @@
         <item>"1,1"</item>
         <item>"0,1"</item>
         <item>"7,1"</item>
-        <item>"14,1"</item>
     </string-array>
 
     <!-- tetherable USB interfaces. -->
     <string-array translatable="false" name="config_tether_usb_regexs">
-        <item>"usb\\d"</item>
         <item>"rndis\\d"</item>
     </string-array>
 
     <!-- tetherable Wifi interfaces. -->
     <string-array translatable="false" name="config_tether_wifi_regexs">
-        <item>"wl0.1"</item>
+        <item>"wlan\\d"</item>
     </string-array>
 
     <!-- tetherable bluetooth interfaces. -->
@@ -153,19 +151,16 @@
     <!-- Boolean indicating whether the wifi chipset has background scan support -->
     <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
 
-    <!-- Boolean indicating whether the start command should be called on the wireless interface when starting the SoftAp -->
-    <bool name="config_wifiApStartInterface">true</bool>
-
-    <!-- Boolean indicating whether Softap requires reloading AP firmware -->
-    <bool name="config_wifiApFirmwareReload">true</bool>
-
     <!-- Is the notification LED intrusive?
          Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
 
     <!-- Is the battery LED intrusive?
          Used to decide if there should be a disable option -->
-    <!--<bool name="config_intrusiveBatteryLed">true</bool>-->
+    <bool name="config_intrusiveBatteryLed">true</bool>
+
+    <!-- Device supports LED flashlight -->
+    <bool name="config_enableTorch">false</bool>
 
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">true</bool>
@@ -180,13 +175,10 @@
             16 - App switch
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <!--<integer name="config_deviceHardwareKeys">7</integer>-->
+    <integer name="config_deviceHardwareKeys">7</integer>
 
     <!-- Boolean to configure if the device has two system partitions
          This is only for Xiaomi devices -->
      <!--<bool name="config_dualsystem">true</bool>-->
-
-    <!-- Disable lockscreen translucent decor by default -->
-    <bool name="config_enableLockScreenTranslucentDecor">true</bool>
 
 </resources>
